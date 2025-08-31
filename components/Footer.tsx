@@ -13,36 +13,36 @@ const Footer = async () => {
             </div>
             <div className="flex justify-center gap-6 mb-4 text-white">
                 <Link
-                    href="https://facebook.com/"
+                    href="https://www.facebook.com/tahmid.tuhin.3"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors duration-300"
                 >
-                    <FaFacebookF size={20} />
+                    <FaFacebookF size={25} />
                 </Link>
                 <Link
-                    href="https://twitter.com/"
+                    href="https://twitter.com/hosenRabby"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors duration-300"
                 >
-                    <FaTwitter size={20} />
+                    <FaTwitter size={25} />
                 </Link>
                 <Link
-                    href="https://linkedin.com/"
+                    href="https://www.linkedin.com/in/hosen-rabby-dev/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors duration-300"
                 >
-                    <FaLinkedinIn size={20} />
+                    <FaLinkedinIn size={25} />
                 </Link>
                 <Link
-                    href="https://github.com/"
+                    href="https://github.com/hosenrabby"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors duration-300"
                 >
-                    <FaGithub size={20} />
+                    <FaGithub size={25} />
                 </Link>
             </div>
 

@@ -12,7 +12,7 @@ export const GENERAL_INFO = {
 export const SOCIAL_LINKS: { id: string; icon: IconType; url: string }[] = [
     { id: 'github', icon: FaGithub, url: 'https://github.com/hosenrabby' },
     { id: 'linkedin', icon: FaLinkedinIn, url: 'https://www.linkedin.com/in/hosen-rabby-dev/' },
-    { id: 'twitter', icon: FaTwitter, url: 'https://twitter.com/your_username' },
+    { id: 'twitter', icon: FaTwitter, url: 'https://twitter.com/hosenRabby' },
     { id: 'facebook', icon: FaFacebookF, url: 'https://www.facebook.com/tahmid.tuhin.3' },
 ];
 
@@ -221,60 +221,6 @@ export const PROJECTS: IProject[] = [
         ],
     },
     {
-        title: 'JOB Hunt',
-        slug: 'job-hunt',
-        liveUrl: 'https://job-hunt-8ca298.netlify.app/',
-        year: 2025,
-        description: `
-      Job Hunt is a web application designed to connect job seekers with employers by providing up-to-date job listings, detailed job descriptions, and an easy application process. Authenticated users can manage their profiles, track applications, and save favorite jobs. <br/> <br/>
-      
-      Key Features:<br/>
-      <ul>
-        <li>🔍 Browse available job listings with filter & search options</li>
-        <li>🗂️ Manage your own job applications and saved jobs</li>
-        <li>📝 Submit applications and track their status (protected)</li>
-        <li>🔐 JWT Authentication (Sign up / Login)</li>
-        <li>⭐ Employer and candidate profiles with contact info</li>
-        <li>🤝 Connects candidates to employers for smooth communication</li>
-        <li>⚡ Fast Performance: Optimized React.js frontend with responsive interactions</li>
-      </ul><br/>
-      
-      Technical Highlights:
-      <ul>
-        <li>Tracked job application status and employer responses in real-time</li>
-        <li>Implemented efficient data fetching with vanila js</li>
-        <li>Implemented filtering and search functionality for job listings with vanila js</li>        
-
-      </ul>
-      `,
-        role: `
-      Web Developer <br/>
-      Owned the entire development lifecycle:
-      <ul>
-        <li>🎨 Frontend: Designed responsive UI with React, Tailwind CSS, and DaisyUI</li>
-        <li>🔄 State Management: Enabled dynamic fetching, posting, updating, and deleting job data</li>
-        <li>🖥️ Auth: Implemented JWT-based login and role-based access for candidates and employers</li>
-        <li>🚀 Deployment: Deployed on Vercel/Netlify with optimized performance</li>
-        <li>🧩 Interactive Features: Application tracking, saved jobs, and intuitive dashboards</li>
-
-      </ul>
-      `,
-        techStack: [
-            'React.js',
-            'Tailwind CSS',
-            'Daisy UI',
-            'Framer motion',
-            'Netlify',
-        ],
-        thumbnail: '/projects/thumbnail/JobHuntThumbnail.jpg',
-        longThumbnail: '/projects/long/JobHuntThumbnail.jpg',
-        images: [
-            '/projects/images/JobHuntImage-1.jpg',
-            '/projects/images/JobHuntImage-2.jpg',
-            '/projects/images/JobHuntImage-3.jpg',
-        ],
-    },
-    {
         title: 'Take-Task Marketplace',
         slug: 'take-task',
         liveUrl: 'https://take-task-marketplace-77c6d4.netlify.app/',
@@ -324,6 +270,60 @@ export const PROJECTS: IProject[] = [
             'Daisy UI',
             'Framer motion',
             'Vercel',
+        ],
+        thumbnail: '/projects/thumbnail/TakeTaskThambnail.jpg',
+        longThumbnail: '/projects/long/TakeTaskThambnail.jpg',
+        images: [
+            '/projects/images/TakeTaskImage-1.jpg',
+            '/projects/images/TakeTaskImage-2.jpg',
+            '/projects/images/TakeTaskImage-3.jpg',
+        ],
+    },
+    {
+        title: 'JOB Hunt',
+        slug: 'job-hunt',
+        liveUrl: 'https://job-hunt-8ca298.netlify.app/',
+        year: 2025,
+        description: `
+      Job Hunt is a web application designed to connect job seekers with employers by providing up-to-date job listings, detailed job descriptions, and an easy application process. Authenticated users can manage their profiles, track applications, and save favorite jobs. <br/> <br/>
+      
+      Key Features:<br/>
+      <ul>
+        <li>🔍 Browse available job listings with filter & search options</li>
+        <li>🗂️ Manage your own job applications and saved jobs</li>
+        <li>📝 Submit applications and track their status (protected)</li>
+        <li>🔐 JWT Authentication (Sign up / Login)</li>
+        <li>⭐ Employer and candidate profiles with contact info</li>
+        <li>🤝 Connects candidates to employers for smooth communication</li>
+        <li>⚡ Fast Performance: Optimized React.js frontend with responsive interactions</li>
+      </ul><br/>
+      
+      Technical Highlights:
+      <ul>
+        <li>Tracked job application status and employer responses in real-time</li>
+        <li>Implemented efficient data fetching with vanila js</li>
+        <li>Implemented filtering and search functionality for job listings with vanila js</li>        
+
+      </ul>
+      `,
+        role: `
+      Web Developer <br/>
+      Owned the entire development lifecycle:
+      <ul>
+        <li>🎨 Frontend: Designed responsive UI with React, Tailwind CSS, and DaisyUI</li>
+        <li>🔄 State Management: Enabled dynamic fetching, posting, updating, and deleting job data</li>
+        <li>🖥️ Auth: Implemented JWT-based login and role-based access for candidates and employers</li>
+        <li>🚀 Deployment: Deployed on Vercel/Netlify with optimized performance</li>
+        <li>🧩 Interactive Features: Application tracking, saved jobs, and intuitive dashboards</li>
+
+      </ul>
+      `,
+        techStack: [
+            'React.js',
+            'Tailwind CSS',
+            'Daisy UI',
+            'Framer motion',
+            'Netlify',
         ],
         thumbnail: '/projects/thumbnail/JobHuntThumbnail.jpg',
         longThumbnail: '/projects/long/JobHuntThumbnail.jpg',
