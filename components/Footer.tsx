@@ -1,0 +1,56 @@
+import { GENERAL_INFO } from '@/lib/data';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
+
+const Footer = async () => {
+    return (
+        <footer className="text-center pb-5" id="contact">
+            <div className="container">
+                <p className="text-lg">Have a project in mind?</p>
+                <a href={`mailto:${GENERAL_INFO.email}`} className="text-3xl sm:text-4xl font-anton inline-block mt-5 mb-4 hover:underline" >
+                    {GENERAL_INFO.email}
+                </a>
+            </div>
+            <div className="flex justify-center gap-6 mb-4 text-white">
+                <a
+                    href="https://facebook.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors duration-300"
+                >
+                    <FaFacebookF size={20} />
+                </a>
+                <a
+                    href="https://twitter.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors duration-300"
+                >
+                    <FaTwitter size={20} />
+                </a>
+                <a
+                    href="https://linkedin.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors duration-300"
+                >
+                    <FaLinkedinIn size={20} />
+                </a>
+                <a
+                    href="https://github.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors duration-300"
+                >
+                    <FaGithub size={20} />
+                </a>
+            </div>
+
+            <p className="text-sm text-gray-500">
+                © {new Date().getFullYear()} Portfolio of Hosen Rabby. All rights reserved.
+            </p>
+
+        </footer>
+    );
+};
+
+export default Footer;
