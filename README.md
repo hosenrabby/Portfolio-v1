@@ -6,7 +6,7 @@ Built with **Next.js, TailwindCSS, GSAP** for smooth UI/UX.
 ---
 
 ## 📸 Screenshots
-![Homepage Screenshot](/projects/ProfileImg/screenshot.webp)
+[![Homepage Screenshot](https://raw.githubusercontent.com/hosenrabby/hosenrabby/main/assets/hosenRabbyGithubBGmain.png "Homepage Screenshot")](https://hosenrabby.dev/)
 
 ---
 
