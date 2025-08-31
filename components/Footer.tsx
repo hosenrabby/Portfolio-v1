@@ -1,4 +1,5 @@
 import { GENERAL_INFO } from '@/lib/data';
+import Link from 'next/link';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const Footer = async () => {
@@ -11,38 +12,38 @@ const Footer = async () => {
                 </a>
             </div>
             <div className="flex justify-center gap-6 mb-4 text-white">
-                <a
+                <Link
                     href="https://facebook.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors duration-300"
                 >
                     <FaFacebookF size={20} />
-                </a>
-                <a
+                </Link>
+                <Link
                     href="https://twitter.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors duration-300"
                 >
                     <FaTwitter size={20} />
-                </a>
-                <a
+                </Link>
+                <Link
                     href="https://linkedin.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors duration-300"
                 >
                     <FaLinkedinIn size={20} />
-                </a>
-                <a
+                </Link>
+                <Link
                     href="https://github.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors duration-300"
                 >
                     <FaGithub size={20} />
-                </a>
+                </Link>
             </div>
 
             <p className="text-sm text-gray-500">

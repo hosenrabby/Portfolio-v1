@@ -55,9 +55,7 @@ const AboutMe = () => {
         <section className="pb-section" id="about-me">
             <div className="container" ref={container}>
                 <h2 className="text-4xl md:text-6xl font-thin mb-20 slide-up-and-fade">
-                    I believe in a user centered design approach, ensuring that
-                    every project I work on is tailored to meet the specific
-                    needs of its users.
+                    I’m a passionate Web Developer to building modern, scalable, and user-friendly web applications from concept to deployment.
                 </h2>
 
                 <p className="pb-3 border-b text-muted-foreground slide-up-and-fade">

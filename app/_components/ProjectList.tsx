@@ -106,7 +106,7 @@ const ProjectList = () => {
     return (
         <section className="pb-section" id="selected-projects">
             <div className="container">
-                <SectionTitle title="SELECTED PROJECTS" />
+                <SectionTitle title="SKILLS GAINED FROM THIS PROJECTS" />
 
                 <div className="group/projects relative" ref={containerRef}>
                     {selectedProject !== null && (

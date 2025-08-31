@@ -64,9 +64,9 @@ const Banner = () => {
                             Reach Out Me
                         </Button>
                         <ButtonSec
-                            text="RESUME"
+                            text="MY RESUME"
                             icon={<GoArrowUpRight />}
-                            onClick={() => alert("Button clicked!")}
+                            href="#"
                             className="mt-9 banner-button slide-up-and-fade" />
                     </div>
                 </div>

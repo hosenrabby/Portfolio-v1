@@ -1,4 +1,6 @@
 import { IProject } from '@/types';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { IconType } from 'react-icons';
 
 export const GENERAL_INFO = {
     email: 'hosenrabby.dev@gmail.com',
@@ -7,10 +9,11 @@ export const GENERAL_INFO = {
     emailBody: 'Hi Hosen Rabby, I am reaching out to you because...',
 };
 
-export const SOCIAL_LINKS = [
-    { name: 'github', url: 'https://github.com/hosenrabby' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/hosen-rabby-dev/' },
-    { name: 'facebook', url: 'https://www.facebook.com/tahmid.tuhin.3' },
+export const SOCIAL_LINKS: { id: string; icon: IconType; url: string }[] = [
+    { id: 'github', icon: FaGithub, url: 'https://github.com/hosenrabby' },
+    { id: 'linkedin', icon: FaLinkedinIn, url: 'https://www.linkedin.com/in/hosen-rabby-dev/' },
+    { id: 'twitter', icon: FaTwitter, url: 'https://twitter.com/your_username' },
+    { id: 'facebook', icon: FaFacebookF, url: 'https://www.facebook.com/tahmid.tuhin.3' },
 ];
 
 export const MY_STACK = {
@@ -98,177 +101,237 @@ export const MY_STACK = {
 
 export const PROJECTS: IProject[] = [
     {
-        title: 'MTI Electronics',
-        slug: 'mti-electronics',
-        liveUrl: 'https://mti-electronics.vercel.app/',
+        title: 'Review Tracker',
+        slug: 'review-tracker',
+        liveUrl: 'https://service-review-tracker.netlify.app/',
         year: 2025,
         description: `
-      A complete agency portfolio platform built for MTI Electronics to showcase their services, blog content, and product offerings. <br/> <br/>
+      ReviewTracker is an interactive web app where users explore services, share reviews, and manage their submissions. Reviews display dynamically in an animated carousel powered by Framer Motion for engaging experiences. <br/> <br/>
       
       Key Features:<br/>
       <ul>
-        <li>🛠️ Service Display System: Interactive service showcase with synchronized sliders</li>
-        <li>✍️ Blog Management: SEO-friendly blog with categorization and search</li>
-        <li>🛒 Product Catalog: Organized product display with filtering capabilities</li>
-        <li>📱 Fully Responsive: Optimized for all device sizes</li>
-        <li>⚡ Fast Performance: Optimized Next.js frontend with ISR (Incremental Static Regeneration)</li>
+        <li>🔍 Browse all services with filter & search</li>
+        <li>🗂️ Manage your added services </li>
+        <li>📝 Submit and manage your reviews (protected)</li>
+        <li>🔐 JWT Authentication (Sign up / Login)</li>
+        <li>⭐ Star rating and user photo support</li>
+        <li>⚡ Fast Performance: Optimized React.js frontend with efficient rendering techniques for a smooth and responsive user experience.</li>
       </ul><br/>
       
       Technical Highlights:
       <ul>
         <li>Implemented complex slider synchronization logic using Swiper.js</li>
-        <li>Customized Payload CMS admin panel for intuitive content management</li>
         <li>Developed reusable UI components with shadcn for design consistency</li>
-        <li>Configured efficient data fetching strategies in Next.js</li>
+        <li>Configured efficient data fetching strategies in React.js with Axios</li>
       </ul>
       `,
         role: `
-      Full-Stack Developer <br/>
+      Web Developer <br/>
       Owned the entire development lifecycle:
       <ul>
-        <li>✅ Backend: Configured Payload CMS with custom collections for services, blogs, and products</li>
-        <li>🎨 Frontend: Built all UI components using Tailwind CSS and shadcn</li>
-        <li>🔄 State Management: Implemented client-side data fetching and caching</li>
-        <li>🖥️ CMS Customization: Created admin interfaces for content editors</li>
-        <li>🚀 Deployment: Set up CI/CD pipeline for Vercel hosting</li>
-        <li>🧩 Third-Party Integration: Added Swiper.js for interactive sliders</li>
+        <li>✅ Backend: Configured REST API with Node.js/Express and MongoDB for services and reviews</li>
+        <li>🎨 Frontend: Built responsive UI using React, Tailwind CSS, and Framer Motion</li>
+        <li>🔄 State Management: Implemented dynamic data fetching, adding, editing, and deleting reviews</li>
+        <li>🖥️ Authentication: Added user login and authorization for managing services and reviews</li>
+        <li>🚀 Deployment: Deployed the app on Netlify and Vercel with optimized performance</li>
+        <li>🧩 Interactive Features: Integrated animated carousel for displaying reviews dynamically</li>
+
       </ul>
       `,
         techStack: [
-            'Next.js',
-            'Payload CMS',
+            'React.js',
+            'Node.js',
+            'Express.js',
+            'MongoDB',
             'Tailwind CSS',
-            'shadcn',
+            'ReactBits',
             'Swiper.js',
             'React Hook Form',
             'Vercel',
         ],
-        thumbnail: '/projects/thumbnail/mti-electronics.webp',
-        longThumbnail: '/projects/long/mti-electronics.webp',
+        thumbnail: '/projects/thumbnail/reviewTrackerThambnail.jpg',
+        longThumbnail: '/projects/long/reviewTrackerThambnail.jpg',
         images: [
-            '/projects/images/mti-electronics-1.webp',
-            '/projects/images/mti-electronics-2.webp',
+            '/projects/images/reviewTrackerImage-1.jpg',
+            '/projects/images/reviewTrackerImage-2.jpg',
+            '/projects/images/reviewTrackerImage-3.png',
+            '/projects/images/reviewTrackerImage-4.png',
         ],
     },
     {
-        title: 'Epikcart',
-        slug: 'epikcart',
-        techStack: [
-            'React',
-            'Redux',
-            'React i18n',
-            'Tailwind CSS',
-            'Framer Motion',
-            'debouncing',
-            'Api Integration',
-        ],
-        thumbnail: '/projects/thumbnail/epikcart.jpg',
-        longThumbnail: '/projects/long/epikcart.jpg',
-        images: [
-            '/projects/images/epikcart-1.png',
-            '/projects/images/epikcart-2.png',
-            '/projects/images/epikcart-3.png',
-            '/projects/images/epikcart-4.png',
-            '/projects/images/epikcart-5.png',
-        ],
-        liveUrl: 'https://demo.epikcart.siphertech.com/',
-        year: 2023,
-        description: `Epikcart is a feature-rich, scalable e-commerce platform tailored for large businesses. It features dynamic product filtering, multi-language support with RTL, advanced inventory management, order tracking, and refund systems, offering a comprehensive solution for multi-vendor operations.`,
-        role: `As the frontend developer in a team of five, I: <br/>
-        - Built the frontend from scratch using React, Redux, RTK Query, and Tailwind CSS.<br/>
-        - Developed dynamic filtering logic for the product search page with admin-configurable parameters.<br/>
-        - Integrated multi-language support with React i18n, including RTL handling.<br/>
-        - Delivered a responsive, user-friendly interface in collaboration with the UI/UX designer.`,
-    },
-    {
-        title: 'Resume Roaster',
-        slug: 'resume-roaster',
-        techStack: [
-            'GPT-4',
-            'Next.js',
-            'Postgressql',
-            'Prisma',
-            'Tailwind CSS',
-        ],
-        thumbnail: '/projects/thumbnail/resume-roaster.jpg',
-        longThumbnail: '/projects/long/resume-roaster.jpg',
-        images: [
-            '/projects/images/resume-roaster-1.png',
-            '/projects/images/resume-roaster-2.png',
-            '/projects/images/resume-roaster-3.png',
-        ],
-        liveUrl: 'https://resume-roaster.vercel.app/',
-        year: 2023,
-        description:
-            'Resume Roaster is a web application designed to provide tailored resume feedback and professional writing services. Built with Next.js, PostgreSQL, Prisma, and Tailwind CSS, it integrates GPT-4 for AI-powered recommendations. The platform also includes peer-to-peer reviews with a points-based system, fostering a collaborative and engaging experience. Targeting freshers, experienced professionals, and programmers, it helps optimize resumes for job-specific success.',
-        role: `As the sole developer and business owner, I:<br/>
-        - Designed and developed the platform end-to-end using Next.js, PostgreSQL, Prisma, and Tailwind CSS.<br/>
-        - Integrated GPT-4 for AI-driven feedback and insights.<br/>
-        - Implemented complex SQL queries, including one to identify the top two resumes based on user points.`,
-    },
-    {
-        title: 'Real Estate',
-        slug: 'property-pro',
+        title: 'Blood Donation System',
+        slug: 'blood-donation',
+        liveUrl: 'https://blood-buddies.netlify.app/',
+        year: 2025,
+        description: `
+      BloodBuddies is a web application that streamlines blood donation requests and donor matching. Recipients can create requests with required blood group and location details, and donors can view and respond to requests. The app includes user authentication, a dashboard for managing requests, and dynamic district/upazila selection for location-specific matching. <br/> <br/>
+      
+      Key Features:<br/>
+      <ul>
+        <li>🔍 Browse available blood donation requests with filter & search</li>
+        <li>🗂️ Manage your own donation requests</li>
+        <li>📝 Submit and track your donations (protected)</li>
+        <li>🔐 JWT Authentication (Sign up / Login)</li>
+        <li>⭐ Donor and recipient profiles with contact info</li>
+        <li>🤝 Connects donors to recipients for seamless communication</li>
+        <li>⚡ Fast Performance: Optimized React.js frontend with smooth and responsive interactions</li>
+
+      </ul><br/>
+      
+      Technical Highlights:
+      <ul>
+        <li>Built role-based dashboard for donors, recipients, and admins</li>
+        <li>Tracked donor donation status and request fulfillment in real-time</li>
+        <li>Implemented efficient data fetching and caching using React.js with Axios</li>
+        <li>Implemented filtering and search functionality for donation requests</li>
+
+      </ul>
+      `,
+        role: `
+      Web Developer <br/>
+      Owned the entire development lifecycle:
+      <ul>
+        <li>✅ Backend: Built REST API with Node.js/Express and MongoDB/PostgreSQL for blood requests</li>
+        <li>🎨 Frontend: Responsive UI with React, Tailwind CSS, and DaisyUI</li>
+        <li>🔄 State Management: Dynamic fetching, adding, updating, and deleting requests</li>
+        <li>🖥️ Auth: User login and role-based access for donors and admins</li>
+        <li>🧭 Location Features: Dynamic district/upazila selection for targeted requests</li>
+        <li>🚀 Deployment: Hosted on Vercel/Netlify with optimized performance</li>
+        <li>🧩 Interactive Features: Status indicators, conditional buttons, and user-friendly forms</li>
+      </ul>
+      `,
         techStack: [
             'React.js',
-            'Redux',
+            'Stripe Payment',
+            'Node.js',
+            'MongoDB',
+            'Express.js',
             'Tailwind CSS',
-            'React i18n',
-            'Framer Motion',
+            'Framer motion',
+            'React Hook Form',
+            'Vercel',
         ],
-        thumbnail: '/projects/thumbnail/property-pro.jpg',
-        longThumbnail: '/projects/long/property-pro.jpg',
+        thumbnail: '/projects/thumbnail/bloodBodies-thambnail.png',
+        longThumbnail: '/projects/long/bloodBodies-thambnail.png',
         images: [
-            '/projects/images/property-pro-1.png',
-            '/projects/images/property-pro-2.png',
-            '/projects/images/property-pro-3.png',
+            '/projects/images/bloodBoddiesImage-1.png',
+            '/projects/images/bloodBuddiesImage-2.png',
+            '/projects/images/bloodBuddiesImage-3.png',
+            '/projects/images/bloodBuddiesImage-4.png',
         ],
-        liveUrl: 'https://demo.propertypro.siphertech.com/',
-        year: 2023,
-        description:
-            'PropertyPro is a real estate management platform offering users a seamless experience to explore, manage, and view property listings. The application emphasizes accessibility and responsive design, ensuring a smooth interface across devices.',
-        role: `As the frontend developer, I:<br/>
-        - Built the frontend using React, Redux, RTK Query, Framer Motion, and Tailwind CSS.<br/>
-        - Integrated dynamic state management for efficient handling of property data.<br/>
-        - Implemented multi-language support with React i18n to cater to diverse audiences.<br/>
-        - Enhanced user interaction with animations and transitions using Framer Motion.`,
     },
     {
-        title: 'Consulting Finance',
-        slug: 'crenotive',
-        techStack: ['HTML', 'CSS & SCSS', 'Javascript', 'Bootstrap'],
-        thumbnail: '/projects/thumbnail/consulting-finance.jpg',
-        longThumbnail: '/projects/long/consulting-finance.jpg',
-        images: [
-            '/projects/images/consulting-finance-1.png',
-            '/projects/images/consulting-finance-2.png',
-            '/projects/images/consulting-finance-3.png',
-        ],
-        sourceCode: 'https://github.com/Tajmirul/crenotive',
-        liveUrl: 'https://crenotive.netlify.app/',
-        year: 2023,
-        description:
-            'I developed Crenotive, a portfolio website using Html, SASS, and jQuery to showcase services and expertise. The design focuses on responsive user experience and effective presentation of professional achievements.',
-        role: ``,
-    },
-    {
-        title: 'devLinks',
-        slug: 'devLinks',
-        techStack: ['Next.js', 'Formik', 'Drag & Drop', 'Tailwind CSS'],
-        thumbnail: '/projects/thumbnail/devLinks.jpg',
-        longThumbnail: '/projects/long/devLinks.jpg',
-        images: [
-            '/projects/images/devLinks-1.png',
-            '/projects/images/devLinks-2.png',
-            '/projects/images/devLinks-3.png',
-        ],
-        sourceCode: 'https://github.com/Tajmirul/devsLink',
-        liveUrl: 'https://devlinks-demo.vercel.app/auth/signin',
-        year: 2023,
-        description: `One of the most challenging projects in Frontend Mentor.<br/><br/>
+        title: 'JOB Hunt',
+        slug: 'job-hunt',
+        liveUrl: 'https://job-hunt-8ca298.netlify.app/',
+        year: 2025,
+        description: `
+      Job Hunt is a web application designed to connect job seekers with employers by providing up-to-date job listings, detailed job descriptions, and an easy application process. Authenticated users can manage their profiles, track applications, and save favorite jobs. <br/> <br/>
+      
+      Key Features:<br/>
+      <ul>
+        <li>🔍 Browse available job listings with filter & search options</li>
+        <li>🗂️ Manage your own job applications and saved jobs</li>
+        <li>📝 Submit applications and track their status (protected)</li>
+        <li>🔐 JWT Authentication (Sign up / Login)</li>
+        <li>⭐ Employer and candidate profiles with contact info</li>
+        <li>🤝 Connects candidates to employers for smooth communication</li>
+        <li>⚡ Fast Performance: Optimized React.js frontend with responsive interactions</li>
+      </ul><br/>
+      
+      Technical Highlights:
+      <ul>
+        <li>Tracked job application status and employer responses in real-time</li>
+        <li>Implemented efficient data fetching with vanila js</li>
+        <li>Implemented filtering and search functionality for job listings with vanila js</li>        
 
-            I developed a LinkSharing App as part of the Frontend Mentor challenge, utilizing React, Redux, and Tailwind CSS to create a responsive and feature-rich platform. The app allows users to share, save, and explore links, with a focus on intuitive design and smooth navigation. Advanced state management ensures efficient data handling for user interactions.`,
-        role: ``,
+      </ul>
+      `,
+        role: `
+      Web Developer <br/>
+      Owned the entire development lifecycle:
+      <ul>
+        <li>🎨 Frontend: Designed responsive UI with React, Tailwind CSS, and DaisyUI</li>
+        <li>🔄 State Management: Enabled dynamic fetching, posting, updating, and deleting job data</li>
+        <li>🖥️ Auth: Implemented JWT-based login and role-based access for candidates and employers</li>
+        <li>🚀 Deployment: Deployed on Vercel/Netlify with optimized performance</li>
+        <li>🧩 Interactive Features: Application tracking, saved jobs, and intuitive dashboards</li>
+
+      </ul>
+      `,
+        techStack: [
+            'React.js',
+            'Tailwind CSS',
+            'Daisy UI',
+            'Framer motion',
+            'Netlify',
+        ],
+        thumbnail: '/projects/thumbnail/JobHuntThumbnail.jpg',
+        longThumbnail: '/projects/long/JobHuntThumbnail.jpg',
+        images: [
+            '/projects/images/JobHuntImage-1.jpg',
+            '/projects/images/JobHuntImage-2.jpg',
+            '/projects/images/JobHuntImage-3.jpg',
+        ],
+    },
+    {
+        title: 'Take-Task Marketplace',
+        slug: 'take-task',
+        liveUrl: 'https://take-task-marketplace-77c6d4.netlify.app/',
+        year: 2025,
+        description: `
+      TakeTask Marketplace allows clients to create freelance task listings and freelancers to apply and manage their ongoing tasks. It features a secure authentication system, dynamic filtering for finding tasks, and a responsive interface for smooth interactions across devices. <br/> <br/>
+      
+      Key Features:<br/>
+      <ul>
+        <li>👤 User Authentication (Email/Password, Google, GitHub)</li>
+        <li>📝 Post Tasks with Categories, Budget, and Deadlines</li>
+        <li>🔍 Browse and Filter Tasks</li>
+        <li>🛠 Bid on Tasks</li>
+        <li>💼 View My Posted Tasks</li>
+        <li>💬 Task Details View</li>
+        <li>📦 Membership Plans UI</li>
+        <li>🎨 Responsive, modern design using TailwindCSS and DaisyUI</li>
+        <li>⚡ Fast Performance: Optimized React.js frontend with responsive interactions</li>
+      </ul><br/>
+      
+      Technical Highlights:
+      <ul>
+        <li>Enabled posting tasks with categories, budget, and deadlines</li>
+        <li>Tracked task status, bids, and completion updates in real-time</li>
+        <li>Implemented efficient data fetching and caching using React.js with Axios</li>
+        <li>Added filtering and search functionality for tasks</li>
+      </ul>
+      `,
+        role: `
+      Web Developer <br/>
+      Owned the entire development lifecycle:
+      <ul>
+        <li>✅ Backend: Built REST API with Node.js/Express and MongoDB/PostgreSQL for Tasks, Users, and Users Bids</li>
+        <li>🎨 Frontend: Responsive UI with React, Tailwind CSS, and DaisyUI</li>
+        <li>🔄 State Management: Dynamic fetching, adding, updating, and deleting requests</li>
+        <li>🖥️ Auth: User login and role-based access for donors and admins</li>
+        <li>🚀 Deployment: Hosted on Vercel/Netlify with optimized performance</li>
+        <li>🧩 Interactive Features: Status indicators, conditional buttons, and user-friendly forms</li>
+      </ul>
+      `,
+        techStack: [
+            'React.js',
+            'Node.js',
+            'Express.js',
+            'MongoDB',
+            'Tailwind CSS',
+            'Daisy UI',
+            'Framer motion',
+            'Vercel',
+        ],
+        thumbnail: '/projects/thumbnail/JobHuntThumbnail.jpg',
+        longThumbnail: '/projects/long/JobHuntThumbnail.jpg',
+        images: [
+            '/projects/images/JobHuntImage-1.jpg',
+            '/projects/images/JobHuntImage-2.jpg',
+            '/projects/images/JobHuntImage-3.jpg',
+        ],
     },
 ];
 

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { MoveUpRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { GENERAL_INFO, SOCIAL_LINKS } from '@/lib/data';
+import Link from 'next/link';
 
 const COLORS = [
     'bg-yellow-500 text-black',
@@ -92,24 +93,28 @@ const Navbar = () => {
                 ></div>
 
                 <div className="grow flex md:items-center w-full max-w-[300px] mx-8 sm:mx-auto">
-                    <div className="flex gap-10 lg:justify-between max-lg:flex-col w-full">
-                        <div className="max-lg:order-2">
+                    <div className="flex gap-6 lg:justify-between max-lg:flex-col w-full">
+                        <div className=" flex flex-col gap-1.5">
                             <p className="text-muted-foreground mb-5 md:mb-8">
                                 SOCIAL
                             </p>
-                            <ul className="space-y-3">
-                                {SOCIAL_LINKS.map((link) => (
-                                    <li key={link.name}>
-                                        <a
-                                            href={link.url}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            className="text-lg capitalize hover:underline"
-                                        >
-                                            {link.name}
-                                        </a>
-                                    </li>
-                                ))}
+                            <ul className="space-y-4">
+                                {SOCIAL_LINKS.map((link) => {
+                                    const Icon = link.icon;
+                                    return (
+                                        <li key={link.id}>
+                                            <Link
+                                                href={link.url}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="text-lg capitalize hover:underline flex items-center gap-2 hover:text-primary"
+                                            >
+                                                <Icon size={20} />
+                                                {link.id}
+                                            </Link>
+                                        </li>
+                                    );
+                                })}
                             </ul>
                         </div>
                         <div className="">
