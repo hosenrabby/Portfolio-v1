@@ -7,6 +7,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import React from 'react';
 import { GoArrowUpRight } from 'react-icons/go';
+import { GENERAL_INFO } from '@/lib/data';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -41,7 +42,7 @@ const Banner = () => {
                 className="container h-[100svh] min-h-[530px] max-md:pb-10 flex justify-between items-center max-md:flex-col"
                 ref={containerRef}
             >
-                <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[544px]">
+                <div className="gap-3 max-md:grow max-md:flex flex-col justify-center items-start max-w-[544px]">
                     <h1 className="banner-title slide-up-and-fade leading-[.95] text-6xl sm:text-[80px] font-anton">
                         <span className="text-primary">WEB</span> <span className="ml-2">DEVELOPER</span>
                     </h1>
@@ -57,7 +58,7 @@ const Banner = () => {
                             as="link"
                             target="_blank"
                             rel="noopener noreferrer"
-                            href="#"
+                            href={`mailto:${GENERAL_INFO.email}`}
                             variant="primary"
                             className="mt-9 banner-button slide-up-and-fade"
                         >
@@ -66,13 +67,13 @@ const Banner = () => {
                         <ButtonSec
                             text="MY RESUME"
                             icon={<GoArrowUpRight />}
-                            href="#"
+                            href="https://drive.google.com/file/d/1uBwNuNNrgXWcba2Qtzmvp5NLC6Iwuqoh/view?usp=sharing"
                             className="mt-9 banner-button slide-up-and-fade" />
                     </div>
                 </div>
-                {/* <div>
-                    <img src="" alt="" />
-                </div> */}
+                <div className='bg-primary/30 rounded-tl-full'>
+                    <img src="/projects/ProfileImg/forBannerProfile.png" alt="" />
+                </div>
                 <div className="md:absolute bottom-[10%] right-[4%] flex md:flex-col gap-4 md:gap-8 text-center md:text-right">
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
